@@ -123,9 +123,51 @@
       </div>
     </article>
 
-    <!-- 03 Footstep -->
+        <!-- 03 Cave Spatial Audio -->
     <article class="track" style="--i:3">
       <div class="rail"><div class="no"><small>0</small>3</div><div class="meter"><span></span><span></span><span></span><span></span></div></div>
+      <div class="body">
+        <h2 class="title">Spatial Environment Audio: <span class="accent">Cave Demo</span></h2>
+        <div class="stack">Wwise × Unity</div>
+        <p class="desc">A spatial audio demo built on geometry-driven sound propagation. Sound changes in real time with the player's position and facing, from an open outdoor clearing, through a cave entrance, to a large waterfall chamber.</p>
+        <div class="block">
+          <div class="block__h">System Implementation</div>
+          <ul class="patch">
+            <li><code>Spatial Audio (Room / Portal)</code><span class="arr">→</span>Unity defines the geometry (AkRoom, AkRoomPortal) and Wwise handles the processing. Sound from the waterfall chamber travels through portals into the connecting rooms, and is perceived as coming from the portal rather than through the wall.</li>
+            <li><code>Diffraction and Transmission</code><span class="arr">→</span>Diffraction drives volume and low-pass filtering as sound bends around openings. Transmission loss is set high so that rock walls block sound. Custom attenuation curves per sound.</li>
+            <li><code>Reverb (Aux Buses)</code><span class="arr">→</span>Two reverb buses for cave spaces of different size. Outdoors has no cave reverb, which is part of the outdoor–indoor contrast.</li>
+            <li><code>RTPC (Wind)</code><span class="arr">→</span>A Unity script drives three RTPCs (Gust, Funnel, Inside). Wind swells at the cave mouth and drops away once inside.</li>
+            <li><code>Layered Waterfall</code><span class="arr">→</span>A main layer and a pitched-down low-frequency layer with separate attenuation curves, so a muffled low rumble is heard first, with the clearer water emerging as the player moves deeper.</li>
+            <li><code>Randomized Ambience</code><span class="arr">→</span>Insects scattered around the player at random positions and intervals (Random Container, pitch and volume variation), crow flyovers moved as a game object so diffraction and transmission still apply.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <div class="block__h">Design Goal</div>
+          <p>Make the player hear the space: the transition from outdoors to the inside of the cave, and the sense of depth as the waterfall chamber is approached, all through real-time sound behavior rather than scripted cues.</p>
+        </div>
+        <div class="block">
+          <div class="block__h">Credits</div>
+          <p>Sound design, Wwise implementation and Unity scripting by me. Waterfall, wind, insect and crow source recordings: Soundly Free, Pixabay, GDC Bundles. Crow wing sounds recorded by me.</p>
+        </div>
+        <div class="chips"><span class="chip">Wwise</span><span class="chip">Unity</span><span class="chip">Spatial Audio</span><span class="chip">Diffraction</span><span class="chip">RTPC</span><span class="chip">Reverb</span></div>
+        <!--
+        <div class="videos">
+          <div class="video-wrap">
+            <div class="video-label">Gameplay capture (speaker recording)</div>
+            <div class="video-container"><iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1" allowfullscreen></iframe></div>
+          </div>
+          <div class="video-wrap">
+            <div class="video-label">Wwise Profiler: Wind_Bed at the cave mouth, then Waterfall_PH through the rooms</div>
+            <div class="video-container"><iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2" allowfullscreen></iframe></div>
+          </div>
+        </div>
+        -->
+      </div>
+    </article>
+
+    <!-- 04 Footstep -->
+    <article class="track" style="--i:3">
+      <div class="rail"><div class="no"><small>0</small>4</div><div class="meter"><span></span><span></span><span></span><span></span></div></div>
       <div class="body">
         <h2 class="title">Interactive <span class="accent">Footstep &amp; Environment System</span></h2>
         <div class="stack">Wwise × Unity</div>
@@ -159,9 +201,9 @@
       </div>
     </article>
 
-    <!-- 04 Tomb Raider -->
+    <!-- 05 Tomb Raider -->
     <article class="track" style="--i:4">
-      <div class="rail"><div class="no"><small>0</small>4</div><div class="meter"><span></span><span></span><span></span><span></span></div></div>
+      <div class="rail"><div class="no"><small>0</small>5</div><div class="meter"><span></span><span></span><span></span><span></span></div></div>
       <div class="body">
         <h2 class="title">Tomb Raider — <span class="accent">Sound Redesign</span></h2>
         <div class="stack">Cinematic Sound Redesign</div>
@@ -188,9 +230,9 @@
       </div>
     </article>
 
-    <!-- 05 Sound Design & Synthesis -->
+    <!-- 06 Sound Design & Synthesis -->
     <article class="track" style="--i:5">
-      <div class="rail"><div class="no"><small>0</small>5</div><div class="meter"><span></span><span></span><span></span><span></span></div></div>
+      <div class="rail"><div class="no"><small>0</small>6</div><div class="meter"><span></span><span></span><span></span><span></span></div></div>
       <div class="body">
         <h2 class="title">Sound Design <span class="accent">&amp; Synthesis</span></h2>
         <div class="stack">Layering · Hybrid Synthesis · Foley</div>
