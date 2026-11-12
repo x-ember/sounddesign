@@ -122,9 +122,51 @@
       </div>
     </article>
 
-    <!-- 03 Footstep -->
+        <!-- 03 Cave Spatial Audio -->
     <article class="track" style="--i:3">
       <div class="rail"><div class="no"><small>0</small>3</div><div class="meter"><span></span><span></span><span></span><span></span></div></div>
+      <div class="body">
+        <h2 class="title">空间环境音频：<span class="accent">洞穴 Demo</span></h2>
+        <div class="stack">Wwise × Unity</div>
+        <p class="desc">基于几何体驱动声音传播的空间音频 Demo。声音随玩家的位置与朝向实时变化，从开阔的室外空地，经过洞口，进入巨大的瀑布洞室。</p>
+        <div class="block">
+          <div class="block__h">System Implementation</div>
+          <ul class="patch">
+            <li><code>Spatial Audio (Room / Portal)</code><span class="arr">→</span>在 Unity 中定义几何体（AkRoom、AkRoomPortal），由 Wwise 负责处理。瀑布洞室的声音经由 Portal 传入相连的房间，听感上声音来自 Portal，而不是穿墙而来。</li>
+            <li><code>Diffraction &amp; Transmission</code><span class="arr">→</span>绕射驱动音量与低通滤波，模拟声音绕过开口时的变化；Transmission Loss 设置较高，使岩壁阻隔声音；每个声音单独设置衰减曲线。</li>
+            <li><code>Reverb (Aux Buses)</code><span class="arr">→</span>两条混响总线对应大小不同的洞穴空间；室外不加洞穴混响，这也是室内外对比的一部分。</li>
+            <li><code>RTPC (Wind)</code><span class="arr">→</span>Unity 脚本驱动三个 RTPC（Gust、Funnel、Inside）。风声在洞口处增强，进入洞内后迅速消退。</li>
+            <li><code>Layered Waterfall</code><span class="arr">→</span>主层与降调低频层使用各自独立的衰减曲线：玩家先听到闷沉的低频轰鸣，随着深入，更清晰的水声逐渐浮现。</li>
+            <li><code>Randomized Ambience</code><span class="arr">→</span>虫鸣在玩家周围随机位置、随机间隔出现（Random Container，音高与音量变化）；乌鸦飞过以 Game Object 移动的方式实现，因此仍会受到绕射与透射的影响。</li>
+          </ul>
+        </div>
+        <div class="block">
+          <div class="block__h">Design Goal</div>
+          <p>让玩家听见空间：从室外进入洞穴内部的过渡，以及接近瀑布洞室时的纵深感——全部通过实时的声音行为实现，而非脚本化的提示音。</p>
+        </div>
+        <div class="block">
+          <div class="block__h">Credits</div>
+          <p>音效设计、Wwise 实现与 Unity 脚本均由本人完成。瀑布、风声、虫鸣与乌鸦叫声素材来源：Soundly Free、Pixabay、GDC Bundles；乌鸦翅膀声为本人录制。</p>
+        </div>
+        <div class="chips"><span class="chip">Wwise</span><span class="chip">Unity</span><span class="chip">Spatial Audio</span><span class="chip">Diffraction</span><span class="chip">RTPC</span><span class="chip">Reverb</span></div>
+        <!--
+        <div class="videos">
+          <div class="video-wrap">
+            <div class="video-label">Gameplay capture (speaker recording)</div>
+            <div class="video-container"><iframe src="//player.bilibili.com/player.html?bvid=YOUR_BVID_1&autoplay=0" allowfullscreen></iframe></div>
+          </div>
+          <div class="video-wrap">
+            <div class="video-label">Wwise Profiler: Wind_Bed at the cave mouth, then Waterfall_PH through the rooms</div>
+            <div class="video-container"><iframe src="//player.bilibili.com/player.html?bvid=YOUR_BVID_2&autoplay=0" allowfullscreen></iframe></div>
+          </div>
+        </div>
+        -->
+      </div>
+    </article>
+    
+    <!-- 04 Footstep -->
+    <article class="track" style="--i:4">
+      <div class="rail"><div class="no"><small>0</small>4</div><div class="meter"><span></span><span></span><span></span><span></span></div></div>
       <div class="body">
         <h2 class="title">交互式<span class="accent">脚步与环境系统</span></h2>
         <div class="stack">Wwise × Unity</div>
@@ -158,9 +200,9 @@
       </div>
     </article>
 
-    <!-- 04 Tomb Raider -->
-    <article class="track" style="--i:4">
-      <div class="rail"><div class="no"><small>0</small>4</div><div class="meter"><span></span><span></span><span></span><span></span></div></div>
+    <!-- 05 Tomb Raider -->
+    <article class="track" style="--i:5">
+      <div class="rail"><div class="no"><small>0</small>5</div><div class="meter"><span></span><span></span><span></span><span></span></div></div>
       <div class="body">
         <h2 class="title"><span class="cn">古墓丽影</span> — <span class="accent">音效重设计</span></h2>
         <div class="stack">Cinematic Sound Redesign</div>
@@ -187,9 +229,9 @@
       </div>
     </article>
 
-    <!-- 05 Sound Design & Synthesis -->
-    <article class="track" style="--i:5">
-      <div class="rail"><div class="no"><small>0</small>5</div><div class="meter"><span></span><span></span><span></span><span></span></div></div>
+    <!-- 06 Sound Design & Synthesis -->
+    <article class="track" style="--i:6">
+      <div class="rail"><div class="no"><small>0</small>6</div><div class="meter"><span></span><span></span><span></span><span></span></div></div>
       <div class="body">
         <h2 class="title">Sound Design <span class="accent">&amp; Synthesis</span></h2>
         <div class="stack">Layering · Hybrid Synthesis · Foley</div>
