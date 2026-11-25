@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Music · Ember Xiong</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=Archivo+Expanded:wght@700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="wrap">
+    <a href="index.html" class="nav-logo">EMBER XIONG</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="music.html" class="active">Music</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-lang"><a href="../about.html">EN</a></div>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+  <header class="page-header">
+    <div class="page-eyebrow">Music</div>
+    <h1 class="page-title">为故事与玩法<br>而写的音乐。</h1>
+    <p class="page-sub">原创音乐作品。</p>
+  </header>
+
+  <main>
+    <div class="subworks">
+
+      <div class="subwork" id="ciga">
+        <h3>《猫锚猫》 <span class="tag">Game BGM · 2 loops</span></h3>
+        <p class="desc">CiGA GameJam 的游戏背景音乐，包含基础循环与倒计时最后时刻使用的紧张循环。</p>
+        <div class="videos">
+          <div class="video-wrap">
+            <div class="video-label">Basic Loop</div>
+            <audio controls preload="none" style="width:100%;color-scheme:dark" src="../audio/ciga-basic-loop.mp3"></audio>
+          </div>
+          <div class="video-wrap">
+            <div class="video-label">Tension Loop — final countdown</div>
+            <audio controls preload="none" style="width:100%;color-scheme:dark" src="../audio/ciga-tension-loop.mp3"></audio>
+          </div>
+        </div>
+      </div>
+
+      <div class="subwork" id="piano">
+        <h3>曲名 <span class="tag">Piano</span></h3>
+        <p class="desc">钢琴声从远处传来，逐渐靠近，仿佛身处大堂之中，随后渐渐远去直至消失。通过 Reaper 中的混响等空间处理表现距离变化，适合用作主角回忆片段的配乐。</p>
+        <div class="videos">
+          <div class="video-wrap">
+            <audio controls preload="none" style="width:100%;color-scheme:dark" src="../audio/memory-piano.mp3"></audio>
+          </div>
+        </div>
+      </div>
+
+      <div class="subwork" id="powerup">
+        <h3>Power Up! Game Jam <span class="tag">Game BGM · 4 pieces</span></h3>
+        <p class="desc">万圣节主题游戏的音乐，按游戏流程分为日间、夜晚、昼夜转换和紧张时刻四段。</p>
+        <div class="videos">
+          <div class="video-wrap">
+            <div class="video-label">Day</div>
+            <audio controls preload="none" style="width:100%;color-scheme:dark" src="../audio/powerup-day.mp3"></audio>
+          </div>
+          <div class="video-wrap">
+            <div class="video-label">Night</div>
+            <audio controls preload="none" style="width:100%;color-scheme:dark" src="../audio/powerup-night.mp3"></audio>
+          </div>
+          <div class="video-wrap">
+            <div class="video-label">Day / Night Transition</div>
+            <audio controls preload="none" style="width:100%;color-scheme:dark" src="../audio/powerup-transition.mp3"></audio>
+          </div>
+          <div class="video-wrap">
+            <div class="video-label">Tension</div>
+            <audio controls preload="none" style="width:100%;color-scheme:dark" src="../audio/powerup-tension.mp3"></audio>
+          </div>
+        </div>
+      </div>
+
+      <div class="subwork" id="electronic">
+        <h3>曲名 <span class="tag">Electronic</span></h3>
+        <p class="desc">分为四段，每段的鼓点节奏都有变化，带动情绪与氛围的推进，音色组合也随之变化，结尾以机械损坏般的效果收束。</p>
+        <div class="videos">
+          <div class="video-wrap">
+            <audio controls preload="none" style="width:100%;color-scheme:dark" src="../audio/electronic-piece.mp3"></audio>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+<footer class="site-footer">
+  <div class="wrap"><div class="colophon">Ember Xiong — Game Sound Designer</div></div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>
